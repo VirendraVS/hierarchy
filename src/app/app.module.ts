@@ -5,9 +5,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
 import { HttpClientModule} from '@angular/common/http';
-import { HttpService } from './services/http/http.service'
-
-
+import { HttpService } from './services/http/http.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -16,13 +15,12 @@ import { HttpService } from './services/http/http.service'
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
- 
-
   providers: [HttpService],
     
-    bootstrap: [AppComponent],
+  bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

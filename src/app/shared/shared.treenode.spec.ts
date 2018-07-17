@@ -13,13 +13,11 @@ describe('TreeNode', () => {
         treeNode = new TreeNode('Pictures',[summer2014,fall2014]);
     }));
     afterEach(() => { 
-
         let stringiFiedTreeValue  = Utils.serialise(treeNode);
         let treeNodeVar:TreeNode = JSON.parse(stringiFiedTreeValue);
         treeNode = null;
     });
     it('should create a a tree with two nodes', () => { 
-
         //console.log(treeNode);
         expect(treeNode.employee.length).toEqual(2); 
       });
